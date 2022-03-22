@@ -74,5 +74,8 @@
       <Name>DotNetARX</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Papers\Finding the largest area rectangle of arbitrary orientation in a closed contour.pdf" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
