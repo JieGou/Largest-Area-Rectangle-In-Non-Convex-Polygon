@@ -49,6 +49,10 @@
       <HintPath>C:\ObjectARX 2016\inc\AcMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DotNetARX, Version=1.0.8117.16898, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DotNetARX\bin\Debug\DotNetARX.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -67,12 +71,6 @@
     <Compile Include="Rectangle.cs" />
     <Compile Include="PolygonExtenssion.cs" />
     <Compile Include="Vector.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\VisualStudio2017Projects\DotNetARX\DotNetARX.csproj">
-      <Project>{5ddfcada-bea4-402c-b3e4-5c7f83c2f09e}</Project>
-      <Name>DotNetARX</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Papers\Finding the largest area rectangle of arbitrary orientation in a closed contour.pdf" />

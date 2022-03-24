@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestRectangleInsideNonConvexPolygon", "LargestRectangleInsideNonConvexPolygon\LargestRectangleInsideNonConvexPolygon.csproj", "{9D35456F-537B-4355-8089-288768AB456D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetARX", "..\..\..\VisualStudio2017Projects\DotNetARX\DotNetARX.csproj", "{5DDFCADA-BEA4-402C-B3E4-5C7F83C2F09E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetARX", "DotNetARX\DotNetARX.csproj", "{5DDFCADA-BEA4-402C-B3E4-5C7F83C2F09E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
