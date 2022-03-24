@@ -31,8 +31,8 @@ namespace LargestRectangleInsideNonConvexPolygon
             Console.ReadKey();
         }
 
-        [CommandMethod("AddLine")]
-        public static void AddLine()
+        [CommandMethod("LargestInsideRectangle")]
+        public static void LargestInsideRectangle()
         {
             Document doc = Application.DocumentManager.MdiActiveDocument;
             Database db = doc.Database;
