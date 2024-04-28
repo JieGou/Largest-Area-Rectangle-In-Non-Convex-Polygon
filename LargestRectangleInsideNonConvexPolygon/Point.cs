@@ -4,38 +4,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LargestRectangleInsideNonConvexPolygon {
-    public class Point {
+namespace LargestRectangleInsideNonConvexPolygon
+{
+    public class Point
+    {
         public const double EPS = 1e-8;
         public double X { get; set; }
         public double Y { get; set; }
 
-        public Point(double x, double y) {
+        public Point(double x, double y)
+        {
             X = x;
             Y = y;
         }
 
-        public bool IsHigher(Point point) {
+        public bool IsHigher(Point point)
+        {
             return Y - point.Y >= -EPS;
         }
 
-        public bool IsRight(Point point) {
+        public bool IsRight(Point point)
+        {
             return X - point.X >= -EPS;
         }
 
-        public bool AtSamePositionAs(Point point) {
+        public bool AtSamePositionAs(Point point)
+        {
             return Math.Abs(Y - point.Y) <= EPS && Math.Abs(X - point.X) <= EPS;
         }
 
-        public bool OutsideOf(Polygon polygon) {
+        public bool OutsideOf(Polygon polygon)
+        {
             var count = 0;
             var rand = new Random();
             var alpha = rand.NextDouble() * Math.PI;
             var tan = Math.Tan(alpha);
-            if (polygon.Contains(this)) {
+            if (polygon.Contains(this))
+            {
                 return false;
             }
-            foreach (var edge in polygon.Edges) {
+            foreach (var edge in polygon.Edges)
+            {
                 var helpX = edge.End.X - edge.Start.X;
                 var helpY = edge.End.Y - edge.Start.Y;
                 if (helpX * (Y - edge.Start.Y) == helpY * (X - edge.Start.X) && edge.Contains(this))
@@ -47,7 +56,8 @@ namespace LargestRectangleInsideNonConvexPolygon {
                 var crossPoint = new Point(x, y);
                 if (polygon.Contains(crossPoint))
                     return OutsideOf(polygon);
-                if (edge.Contains(crossPoint) && y >= Y) {
+                if (edge.Contains(crossPoint) && y >= Y)
+                {
                     count++;
                     if (edge.End.AtSamePositionAs(crossPoint))
                         count--;
@@ -56,8 +66,14 @@ namespace LargestRectangleInsideNonConvexPolygon {
             return count % 2 == 0;
         }
 
-        public override string ToString() {
-            return $"({X}; {Y})";
+        public override string ToString()
+        {
+            return $"({X},{Y})";
+        }
+
+        internal double GetDistance(Point otherPt)
+        {
+            return Math.Sqrt(Math.Pow(otherPt.X - X, 2) + Math.Pow(otherPt.Y - Y, 2));
         }
     }
 }
